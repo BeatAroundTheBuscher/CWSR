@@ -452,8 +452,9 @@ public class MySalvageSpecialAssigner {
 			}
 			for (PlanetAPI planet : data.system.getPlanets()) {
 				if (planet.getMarket() != null && 
-						planet.getMarket().isPlanetConditionMarketOnly() && 
-						CoreCampaignPluginImpl.hasRuins(planet.getMarket())) {
+						planet.getMarket().isPlanetConditionMarketOnly() ) // &&
+						// CoreCampaignPluginImpl.hasRuins(planet.getMarket()))
+				{
 					context.all.add(planet);
 				}
 			}
@@ -581,15 +582,15 @@ public class MySalvageSpecialAssigner {
 				FactionAPI faction = Global.getSector().getFaction(factionId);
 				int level = min + random.nextInt(max - min + 1);
 				
-				SkillPickPreference pref = SkillPickPreference.EITHER;
+				//SkillPickPreference pref = SkillPickPreference.EITHER;
 				float f = random.nextFloat();
 				if (f < 0.25f) {
-					pref = SkillPickPreference.CARRIER;
+					// pref = SkillPickPreference.CARRIER;
 				} else if (f < 0.5f) {
-					pref = SkillPickPreference.NON_CARRIER;
+					// pref = SkillPickPreference.NON_CARRIER;
 				}
 				
-				PersonAPI officer = OfficerManagerEvent.createOfficer(faction, level, true, pref, true, random);
+				PersonAPI officer = OfficerManagerEvent.createOfficer(faction, level); //, true, pref, true, random);
 				data.officer = officer;
 				data.min = 1;
 				data.max = 1;

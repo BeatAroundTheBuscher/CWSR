@@ -553,13 +553,13 @@
 	"plugins":{
 		# BUSCHER
 		# core equivalent of ModPlugin (must implement the ModPlugin interface)
-		# "coreLifecyclePlugin":"data.campaign.MyCoreLifecyclePluginImpl",
+		"coreLifecyclePlugin":"data.campaign.MyCoreLifecyclePluginImpl",
 		
 		"newGameDialogPlugin":"com.fs.starfarer.api.impl.campaign.NewGameDialogPluginImpl",
 		"combatReadinessPlugin":"com.fs.starfarer.api.impl.combat.CRPluginImpl",
 		# "newGameCreationEntryPoint":"data.scripts.world.SectorGen",
 		"newGameCreationEntryPoint":"data.scripts.world.cwSpaceRaceSectorGen",
-		# "newGameSectorProcGen":"data.campaign.procgen.MySectorProcGen",
+		"newGameSectorProcGen":"data.campaign.procgen.MySectorProcGen",
 		
 		"officerLevelUp":"com.fs.starfarer.api.impl.campaign.OfficerLevelupPluginImpl",
 		"factionPersonalityPicker":"com.fs.starfarer.api.impl.campaign.FactionPersonalityPickerPluginImpl",

@@ -248,7 +248,7 @@ import com.fs.starfarer.api.impl.campaign.intel.inspection.HegemonyInspectionMan
 import com.fs.starfarer.api.impl.campaign.intel.misc.DistressCallIntel;
 import com.fs.starfarer.api.impl.campaign.intel.misc.TradeFleetDepartureIntel;
 import com.fs.starfarer.api.impl.campaign.intel.punitive.PunitiveExpeditionManager;
-import com.fs.starfarer.api.impl.campaign.missions.BaseCampaignMission;
+//import com.fs.starfarer.api.impl.campaign.missions.BaseCampaignMission;
 import com.fs.starfarer.api.impl.campaign.procgen.DefenderDataOverride;
 import com.fs.starfarer.api.impl.campaign.procgen.ProcgenUsedNames;
 import com.fs.starfarer.api.impl.campaign.procgen.themes.BaseAssignmentAI;
@@ -687,7 +687,7 @@ public class MyCoreLifecyclePluginImpl extends BaseModPlugin {
 				system.setEnteredByPlayer(true);
 				//String name = system.getName();
 				//Misc.setAllPlanetsKnown(system);
-				Misc.setAllPlanetsSurveyed(system);
+				//Misc.setAllPlanetsSurveyed(system);
 				market.setSurveyLevel(SurveyLevel.FULL); // could also be a station, not a planet
 			}
 		}
@@ -1016,7 +1016,7 @@ public class MyCoreLifecyclePluginImpl extends BaseModPlugin {
 			person.getName().setFirst("Phillip");
 			person.getName().setLast("Andrada");
 			person.setPortraitSprite(Global.getSettings().getSpriteName("characters", "andrada"));
-			person.getStats().setSkillLevel(Skills.FLEET_LOGISTICS, 3);
+			//person.getStats().setSkillLevel(Skills.FLEET_LOGISTICS, 3);
 			person.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 3);
 			
 			market.setAdmin(person);
@@ -1034,7 +1034,7 @@ public class MyCoreLifecyclePluginImpl extends BaseModPlugin {
 			person.getName().setFirst("Kanta");
 			person.getName().setLast("");
 			person.setPortraitSprite(Global.getSettings().getSpriteName("characters", "kanta"));
-			person.getStats().setSkillLevel(Skills.FLEET_LOGISTICS, 3);
+			//person.getStats().setSkillLevel(Skills.FLEET_LOGISTICS, 3);
 			person.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 3);
 			person.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 3);
 			
@@ -1053,7 +1053,7 @@ public class MyCoreLifecyclePluginImpl extends BaseModPlugin {
 			person.getName().setFirst("Artemisia");
 			person.getName().setLast("Sun");
 			person.setPortraitSprite(Global.getSettings().getSpriteName("characters", "sun"));
-			person.getStats().setSkillLevel(Skills.FLEET_LOGISTICS, 3);
+			//person.getStats().setSkillLevel(Skills.FLEET_LOGISTICS, 3);
 			person.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 3);
 			person.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 3);
 			
@@ -1072,7 +1072,7 @@ public class MyCoreLifecyclePluginImpl extends BaseModPlugin {
 			person.getName().setFirst("Baikal");
 			person.getName().setLast("Daud");
 			person.setPortraitSprite(Global.getSettings().getSpriteName("characters", "baikal"));
-			person.getStats().setSkillLevel(Skills.FLEET_LOGISTICS, 3);
+			//person.getStats().setSkillLevel(Skills.FLEET_LOGISTICS, 3);
 			person.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 3);
 			person.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 3);
 			
@@ -1088,7 +1088,7 @@ public class MyCoreLifecyclePluginImpl extends BaseModPlugin {
 			person.setPostId(Ranks.POST_ADMINISTRATOR);
 			
 			person.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 3);
-			person.getStats().setSkillLevel(Skills.FLEET_LOGISTICS, 3);
+			//person.getStats().setSkillLevel(Skills.FLEET_LOGISTICS, 3);
 			
 			market.setAdmin(person);
 			market.getCommDirectory().addPerson(person, 0);
@@ -1107,7 +1107,7 @@ public class MyCoreLifecyclePluginImpl extends BaseModPlugin {
 				
 				// totally not a front for an Alpha Core
 				person.getStats().setSkillLevel(Skills.INDUSTRIAL_PLANNING, 3);
-				person.getStats().setSkillLevel(Skills.FLEET_LOGISTICS, 3);
+				//person.getStats().setSkillLevel(Skills.FLEET_LOGISTICS, 3);
 				person.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 3);
 				person.setAICoreId(Commodities.ALPHA_CORE);
 				
@@ -1122,7 +1122,7 @@ public class MyCoreLifecyclePluginImpl extends BaseModPlugin {
 	protected void addSkillsAndAssignAdmin(MarketAPI market, PersonAPI admin) {
 		List<String> skills = Global.getSettings().getSortedSkillIds();
 		if (!skills.contains(Skills.PLANETARY_OPERATIONS) ||
-				!skills.contains(Skills.FLEET_LOGISTICS) ||
+				// !skills.contains(Skills.FLEET_LOGISTICS) ||
 				!skills.contains(Skills.INDUSTRIAL_PLANNING)) {
 			return;
 		}
@@ -1154,7 +1154,7 @@ public class MyCoreLifecyclePluginImpl extends BaseModPlugin {
 		
 		if (num == 0 || size >= 7) {
 			if (military) {
-				admin.getStats().setSkillLevel(Skills.FLEET_LOGISTICS, 3);
+				//admin.getStats().setSkillLevel(Skills.FLEET_LOGISTICS, 3);
 			} else if (defenses > 0) {
 				admin.getStats().setSkillLevel(Skills.PLANETARY_OPERATIONS, 3);
 			} else {
@@ -1806,12 +1806,14 @@ public class MyCoreLifecyclePluginImpl extends BaseModPlugin {
 		x.aliasAttribute(TowCableBuff.class, "frames", "f");
 		
 		x.alias("TowCable", TowCable.class);
-		
+
+		/*
 		x.alias("BaseCampaignMission", BaseCampaignMission.class);
 		x.aliasAttribute(BaseCampaignMission.class, "id", "id");
 		x.aliasAttribute(BaseCampaignMission.class, "timestamp", "t");
 		x.aliasAttribute(BaseCampaignMission.class, "acceptLocation", "aL");
 		x.aliasAttribute(BaseCampaignMission.class, "event", "e");
+		 */
 		
 		
 		x.alias("BaseEventPlugin", BaseEventPlugin.class);
