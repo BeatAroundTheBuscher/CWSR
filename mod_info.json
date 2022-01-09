@@ -6,5 +6,7 @@
 	"version":"1.0",
 	"description":"This mod is an example of how to add a single mission to Starfarer. You could just as easily add multiple missions by putting them all within the same mod. You can also add custom ships to the mod, and then use them in missions in the same mod.",
 	"gameVersion":"0.95.1a-RC6",
+
+	"jars":["jars/cwsr.jar"]
 }
 
