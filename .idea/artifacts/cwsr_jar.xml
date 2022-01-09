@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="cwsr:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/cwsr_jar</output-path>
+    <root id="archive" name="cwsr.jar">
+      <element id="module-output" name="cwsr" />
+    </root>
+  </artifact>
+</component>

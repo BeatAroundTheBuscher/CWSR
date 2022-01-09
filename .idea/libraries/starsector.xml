@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="starsector">
+    <CLASSES>
+      <root url="file://$USER_HOME$/Games/starsector" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="file://$USER_HOME$/Games/starsector/mods/MagicLib/doc" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$USER_HOME$/Games/starsector" />
+    </SOURCES>
+    <jarDirectory url="file://$USER_HOME$/Games/starsector" recursive="false" />
+    <jarDirectory url="file://$USER_HOME$/Games/starsector" recursive="false" type="SOURCES" />
+  </library>
+</component>
