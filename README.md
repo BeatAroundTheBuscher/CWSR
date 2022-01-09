@@ -1,0 +1,2 @@
+# CWSR
+A Starsector mod
