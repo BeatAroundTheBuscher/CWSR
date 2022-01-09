@@ -1,0 +1,4 @@
+Galatia population, conditions and industries are handled in the Galatia.java
+Corvus is done by using the JSON
+
+faction in json doesn'T seem to do anything
